@@ -1,0 +1,13 @@
+names:
+- 01-2kg
+- 02-4kg
+- 03-6kg
+nc: 3
+damo:
+  license: MIT
+  project: demo_sample
+  version: 1
+  user: toby
+train: demo_sample/train/images
+val: demo_sample/valid/images
+test: demo_sample/test/images

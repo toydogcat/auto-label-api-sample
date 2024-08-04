@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "label_format_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "folder_relative_path": {
+            "type": "string"
+          },
+          "images_url_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": ["google_drive", "wget"]
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": ["name", "type", "url"]
+            }
+          },
+          "prompt_list": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prompt_map_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label_index_level": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "label_name": {
+                  "type": "string"
+                },
+                "prompt_index": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "use_flag": {
+                  "type": "boolean"
+                }
+              },
+              "required": ["label_index_level", "label_name", "prompt_index", "use_flag"]
+            }
+          }
+        },
+        "required": ["folder_relative_path", "images_url_list", "prompt_list", "prompt_map_list"]
+      }
+    },
+    "output_type": {
+      "type": "string",
+      "enum": ["label", "yolov5", "yolov7", "yolov8"]
+    },
+    "project_name": {
+      "type": "string"
+    }
+  },
+  "required": ["label_format_list", "output_type", "project_name"]
+}

@@ -1,0 +1,16 @@
+demo_type: copy
+path_home:
+  assets_path: assets
+  demo_datas_destination: assets/demo_sample
+  demo_datas_source: utils/datas/all_label_datas
+  log_path: ./logs/backend.log
+  share_images_path: utils/share_images/
+  upload_path: assets/upload_home
+per_image_cost: 0.1
+secret_key: secret-key
+token: 06642ea6-51d3-11ef-94f2-acde48001122
+users:
+  toby: best
+version: v1.0.0
+yolo_train_flag: false
+yolo_version: v8
