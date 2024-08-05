@@ -19,6 +19,17 @@ docker build -f docker/Dockerfile -t auto-label-api:v1 .
 docker run auto-label-api arg1 arg2
 ```
 
+## docker compose
+
+```bash
+# for start
+docker-compose -f docker/docker-compose.yml up --build
+# for down
+docker-compose -f docker/docker-compose.yml down
+
+docker-compose -f docker/docker-compose.yml up
+```
+
 ## run backend
 
 ```bash

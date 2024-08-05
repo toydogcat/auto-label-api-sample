@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  auto_label_api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: auto_label_api_container
+    ports:
+      - "8000:8000"
+    command: ["-m", "b"]
